@@ -5,7 +5,7 @@
 ## 1) Установи зависимости
 
 ```bash
-cd "/Users/anton/Documents/telegram_video_note_bot"
+cd telegram_video_note_bot
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -36,7 +36,7 @@ cp .env.example .env
 ## 4) Запуск
 
 ```bash
-python bot.py
+python3 bot.py
 ```
 
 ## Как использовать
