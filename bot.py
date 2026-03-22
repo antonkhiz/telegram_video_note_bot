@@ -28,6 +28,7 @@ def ffmpeg_video_to_note(input_path: Path, output_path: Path) -> None:
     - crop to square
     - scale to 384x384
     - trim to 60 seconds
+    - maximum quality
     """
     import subprocess
 
@@ -43,13 +44,13 @@ def ffmpeg_video_to_note(input_path: Path, output_path: Path) -> None:
         "-c:v",
         "libx264",
         "-preset",
-        "veryfast",
+        "slow",
         "-crf",
-        "23",
+        "18",
         "-c:a",
         "aac",
         "-b:a",
-        "96k",
+        "192k",
         "-movflags",
         "+faststart",
         str(output_path),
